@@ -22,7 +22,7 @@ I am also interested in creatively employing visualization techniques to debug t
 University of British Columbia
 🎓 BA: Major, Computer Science | Minor, Philosophy - 2015-2019
 University of British Columbia
- Projects LEAP 🐸 LEAP is a large-scale federated and privacy preserving evaluation and analysis platform. LEAP allows users to analyze data distributed across multiple institutions in a private and secure manner, without leaking sensitive user information. This is achieved through an infrastructure that maintains privacy by design and brings the computation to the data, instead of bringing the data to the computation.
+ Research LEAP 🐸 LEAP is a large-scale federated and privacy preserving evaluation and analysis platform. LEAP allows users to analyze data distributed across multiple institutions in a private and secure manner, without leaking sensitive user information. This is achieved through an infrastructure that maintains privacy by design and brings the computation to the data, instead of bringing the data to the computation.
 User queries are propagated to different sites, where each site gives back the result of running the computation on the local data, with carefully added noise to guarantee differential privacy. These results are then returned to the LEAP infrastructure in the cloud, where they are aggregated and sent to the end-user. The infrastructure also keeps track of the privacy loss from each query, safeguarding against information leakage from repeated queries.
 TraVista 🌌 Performance issues in cloud systems are hard to debug. Distributed tracing is a widely adopted approach that gives engineers visibility into cloud systems. Existing tracing tools support the analysis of a single request and are most useful for debugging correctness issues. However, diagnosing performance issues in the processing of a request requires comparing the performance statistics of the offending request with those of normal requests. This processing depends on trace aggregation, which is not supported by existing tracing tools.
 TraVista is a tool designed for debugging latency issues in cloud systems. It helps developers identify the correct aggregate data for diagnosis and effectively visualizes the data, so that performance issues can be identified. Our tool aggregates four types of data: metrics, logs, temporal and structural data and uses an array of visualization techniques to reduce cognitive load and help developers more efficiently find issues with their systems.
@@ -41,7 +41,7 @@ Biscotti 🍪 Federated Learning is the current state of the art in supporting s
   Used React and Redux to build webapp frontend
   Developed a media transcoder to convert videos into mp4 and to extract thumbnail from pictures
   Used AWS lambdas and SQS to scale deployment of media transcoder
-   Publications Finesse: Kernel Bypass for File Systems (Poster) European Conference on Computer Systems (EuroSys&amp;rsquo; 20)
+   Presentations and Posters Finesse: Kernel Bypass for File Systems (Poster) European Conference on Computer Systems (EuroSys&amp;rsquo; 20)
 Matheus Stolet and Tony Mason</description>
     </item>
     
