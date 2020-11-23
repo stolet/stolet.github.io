@@ -41,8 +41,9 @@ Biscotti 🍪 Federated Learning is the current state of the art in supporting s
   Used React and Redux to build webapp frontend
   Developed a media transcoder to convert videos into mp4 and to extract thumbnail from pictures
   Used AWS lambdas and SQS to scale deployment of media transcoder
-   Publications Finesse: Kernel Bypass for File Systems (Poster) European Conference on Computer Systems (EuroSys&amp;rsquo; 20)
-Matheus Stolet and Tony Mason</description>
+   Posters and Talks Finesse: Kernel Bypass for File Systems (Poster) European Conference on Computer Systems (EuroSys&amp;rsquo; 20)
+Matheus Stolet and Tony Mason
+LEAP: a Large-scale federated and privacy preserving Evaluation &amp;amp; Analysis Platform (Talk) BC Cancer Research Summit (2019)</description>
     </item>
     
   </channel>
