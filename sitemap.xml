@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://stolet.github.io/</loc>
+  </url>
+  
+  <url>
     <loc>https://stolet.github.io/home/home/</loc>
   </url>
   
@@ -12,10 +16,6 @@
   
   <url>
     <loc>https://stolet.github.io/home/</loc>
-  </url>
-  
-  <url>
-    <loc>https://stolet.github.io/</loc>
   </url>
   
   <url>
