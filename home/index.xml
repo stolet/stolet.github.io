@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homes on </title>
+    <title>Homes on Matheus Stolet Website</title>
     <link>https://stolet.github.io/home/</link>
-    <description>Recent content in Homes on </description>
+    <description>Recent content in Homes on Matheus Stolet Website</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	<atom:link href="https://stolet.github.io/home/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://stolet.github.io/home/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://stolet.github.io/home/home/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://stolet.github.io/home/home/</guid>
-      <description>Bio I am a PhD student at MPI-SWS, where I am advised by Jonathan Mace in the Cloud Software Systems Group.
+      <description>Bio I am a PhD student at MPI-SWS, where I am advised by Antoine Kaufmann and investigate TCP kernel bypass and ways to free server CPUs from the burden of TCP packet processing. I also work with Jonathan Mace with whom I have explored reinforcement learning techniques to improve scheduling of requests for machine learning inference.
 Previously, I was a MSc student in the Systopia Lab at the University of British Columbia, under the supervision of Ivan Beschastnikh and Aline Talhouk. At UBC my interests revolved around building secure and privacy-preserving distributed systems, where I collaborated closely with Mathias Lécuyer on exploring novel ways for DP systems to conserve their privacy budget.
-I am also interested in employing visualization techniques to debug the performance of large distributed systems, building distributed frameworks for data analytics and machine learning, and researching kernel bypassing methods to optimize user-space file systems.
- Education 🎓 MSc: Computer Science - 2019-2021
+ Education 🎓 PhD: Computer Science - 2021-Present
+Max Planck Institute for Software Systems
+🎓 MSc: Computer Science - 2019-2021
 University of British Columbia
 🎓 BA: Major, Computer Science | Minor, Philosophy - 2015-2019
 University of British Columbia
@@ -42,9 +39,10 @@ Biscotti 🍪 Federated Learning is the current state of the art in supporting s
   Used React and Redux to build webapp frontend
   Developed a media transcoder to convert videos into mp4 and to extract thumbnail from pictures
   Used AWS lambdas and SQS to scale deployment of media transcoder
-   Posters and Talks Finesse: Kernel Bypass for File Systems (Poster) European Conference on Computer Systems (EuroSys&amp;rsquo; 20)
-Matheus Stolet and Tony Mason
-LEAP: a Large-scale federated and privacy preserving Evaluation &amp;amp; Analysis Platform (Talk) BC Cancer Research Summit (2019)</description>
+   Publications and Posters The Odd One Out: Energy is not like Other Metrics HotCarbon 22
+Vaastv Anand, Zhiqiang Xie, Matheus Stolet, Roberta De Viti, Thomas Davidson, Reyhaneh Karimipour, Jonathan Mace
+Finesse: Kernel Bypass for File Systems (Poster) European Conference on Computer Systems (EuroSys&#39; 20)
+Matheus Stolet and Tony Mason</description>
     </item>
     
   </channel>
