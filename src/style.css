@@ -86,11 +86,9 @@ a {
 .intro-div{
   float: center;
   margin: 0 auto;
-  width: 55%;
 }
 
 .intro-para {
-  width: 100%;
   margin: 0 auto 1em;
   line-height: 1.6;
 }
@@ -108,7 +106,6 @@ a {
 }
 
 .section {
-  width: 55%;
   margin: 0 auto 1em;
   text-align: center;
 }
@@ -131,7 +128,6 @@ a {
 }
 
 .flickering-line {
-  width: 55%;
   height: 2px;
   background-color: white;
   animation: lineflicker 0.01s infinite alternate;
