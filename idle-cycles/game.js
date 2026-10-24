@@ -37,7 +37,6 @@
    b.setAttribute('aria-label',`Core ${i+1}, die ${(i>>2)+1}: ${POLICIES[cores[i]]}, ${state}. Paint ${role==='network'?POLICIES[strategy]:POLICIES[role]}.`);
    b.title=cores[i]==='free'?'No app or network work assigned.':`${POLICIES[cores[i]]} · ${state==='lending'?'running borrowed app work':state}`;
   });
-  const n=machine.networkCount,a=cores.filter(c=>c==='app').length;$('core-count').textContent=`${a} app · ${n} network · ${16-a-n} free`;
  }
  function announce(t){$('announcement').textContent=t;}
  function restart(preserveHeat=true){
@@ -277,8 +276,6 @@
   $('power').title=Math.round(machine.power/CAP*100)+'% of package power budget';
   counters['temperature-value'].set(machine.packageTemp);
   $('temperature').className=machine.packageTemp>=90?'limited':machine.packageTemp>=65?'warm':'';
-  const borrowed=machine.lanes.filter(l=>l.state==='lending').length;
-  $('phase-status').textContent=machine.thermalLimited?(machine.recovering?'Recovering · ':'Cooling · ')+Math.round(machine.clockFactor*100)+'% speed':borrowed?borrowed+' borrowed app'+(borrowed>1?'s':''):machine.activeBurst?'Network burst':'Idle phase';
  }
  function updateUI(){
   const rates=machine.rates(),elapsed=machine.t-machine.history[0].t;
@@ -300,9 +297,16 @@
  $('play').addEventListener('click',()=>{playing=!playing;accumulator=0;updateUI();draw();});
  $('reset').addEventListener('click',()=>{cores=defaults();strategy='pause';role='network';$('burst').value=1;$('burst').setAttribute('aria-valuetext','Medium');playing=true;updateSelection();restart(false);announce('Sandbox reset.');});
  let helpWasPlaying=false;
+ let tutorialWasPlaying=false;
+ const tutorial=IdleTutorial({
+  onOpen(){tutorialWasPlaying=playing;playing=false;previous=0;accumulator=0;updateUI();draw();},
+  onClose(){playing=tutorialWasPlaying;previous=0;accumulator=0;updateUI();draw();},
+ });
+ $('tutorial-button').addEventListener('click',()=>tutorial.open());
  $('help-button').addEventListener('click',()=>{helpWasPlaying=playing;playing=false;accumulator=0;updateUI();$('help').showModal();});
+ $('tutorial-replay').addEventListener('click',()=>$('help').close('tutorial'));
  ['help-close','help-done'].forEach(id=>$(id).addEventListener('click',()=>$('help').close()));
- $('help').addEventListener('close',()=>{playing=helpWasPlaying;previous=0;accumulator=0;updateUI();});
+ $('help').addEventListener('close',()=>{playing=helpWasPlaying;previous=0;accumulator=0;updateUI();if($('help').returnValue==='tutorial'){$('help').returnValue='';tutorial.open();}});
  function frame(now){
   const elapsed=previous?Math.min((now-previous)/1000,.1):0;previous=now;
   if(playing&&!document.hidden){accumulator+=elapsed;while(accumulator>=DT){machine.step();accumulator-=DT;}}
@@ -313,5 +317,5 @@
  }
  new ResizeObserver(layout).observe(canvas.parentElement);
  document.addEventListener('visibilitychange',()=>{previous=0;accumulator=0;});
- $('burst').setAttribute('aria-valuetext','Medium');updateSelection();layout();requestAnimationFrame(frame);
+ $('burst').setAttribute('aria-valuetext','Medium');updateSelection();layout();tutorial.open();requestAnimationFrame(frame);
 })();
